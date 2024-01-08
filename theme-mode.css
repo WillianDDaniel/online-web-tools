@@ -1,0 +1,35 @@
+:root {
+    /* Dark Mode Colors */
+    --bg-black: #18181b;
+    --main-black-color: #101010;
+    --secondary-black-color: #000000;
+
+    /* White Mode Colors */
+    --white: #f1f1f1;
+    --main-white-color: #ffffff;
+    --secondary-white-color: #ededed;
+}
+
+.dk-mode {
+    /* background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(15,15,15,1) 50%, rgba(6,7,6,1) 100%); */
+    background-color: var(--bg-black);
+    color: var(--white);
+}
+
+.wt-mode {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 25%, rgba(251,251,250,1) 50%, rgba(243,243,243,1) 100%);
+}
+
+.main-dk-mode {
+    background-color: var(--main-black-color);
+    color: var(--white);
+}
+
+.main-wt-mode {
+    color: var(--black);
+}
+
+.second-dk-mode {
+    background-color: var(--secondary-black-color);
+    color: var(--white);
+}

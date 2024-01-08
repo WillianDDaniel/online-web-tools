@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="/assets/img/online-web-tools.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="conversor de texto, conveter texto pra Maiúsculas, conversor de texto pra Minúsculas">
+  <link rel="stylesheet" href="style.css">
+  <title>Online Web Tools</title>
+</head>
+
+<body>
+
+  <nav id="navBar">
+    <input type="checkbox"> <!-- This input is hide -->
+
+    <a class="logo-link" href="/"><h2 class="logo">Online<span>Web</span><i>Tools</i></h2></a>
+
+    <ul class="nav-items">
+
+      <li><a href="/">Inicio</a></li>
+
+      <li> <!-- whitemode --> 
+        <div>
+          <div class="themeToggle">
+            <label class="themeText">White Mode</label>
+            <input type="checkbox" name="checkbox" id="themeCheckbox">
+            <label for="checkbox" id="themeCheckboxLabel" class="label">
+              <div class="box"></div>
+            </label>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section id="mainSection" class="mainSection">
+    
+  <h2>Conversor de Texto</h2>
+  <textarea type="text" class="inputText" id="inputText" placeholder="Digite o texto aqui"
+    rows="15" cols="100"></textarea>
+  <br>
+  <button class="generateButton" id="toUpperCase">Converter para Maiúsculas</button>
+  <button class="generateButton" id="toLowerCase">Converter para Minúsculas</button>
+  <br>
+  <p id="resultado"></p>
+
+  </section>
+    
+  <footer id="footer">
+    <p> 
+      Todos os direitos reservados &copy; 2024 
+      | Desenvolvido com ❤️ por <strong>Willian D. Daniel</strong>
+    </p>
+  </footer>
+  
+  <script type="module" src="scripts.js"></script>
+  <script type="module" src="../../main.js"></script>
+
+</body>
+</html>

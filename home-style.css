@@ -1,0 +1,63 @@
+@import url(./main-style.css);
+
+
+section {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainSection>ul>li {
+    list-style-type: none;
+}
+
+.mainSection>ul>li>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mainSection>h2 {
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    padding-top: 15px;
+}
+
+.webTools {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.webTools div {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 5px rgba(125, 125, 125, 0.1);
+    border-right: 1px solid var(--bg-black);
+    border-left: 1px solid var(--bg-black);
+}
+
+.webTools div:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.webTools a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.webTools h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 1px 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+}

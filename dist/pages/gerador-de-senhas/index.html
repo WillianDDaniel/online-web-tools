@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/assets/img/online-web-tools.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de Senhas, gerador de Password">
+
+    <title>Gerador de Senhas</title>
+
+  <script type="module" crossorigin src="/online-web-tools/assets/passGenerator-t_SSYPH4.js"></script>
+  <link rel="modulepreload" crossorigin href="/online-web-tools/assets/main-ZiqV161n.js">
+  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/passGenerator-JKS-Llm5.css">
+</head>
+
+<body>
+
+  <nav id="navBar">
+    <input type="checkbox"> <!-- This input is hide -->
+
+    <a class="logo-link" href="/"><h2 class="logo">Online<span>Web</span><i>Tools</i></h2></a>
+
+    <ul class="nav-items">
+      <li><a href="/">Inicio</a></li>
+
+      <li> <!-- whitemode --> 
+        <div>
+          <div class="themeToggle">
+            <label class="themeText">White Mode</label>
+            <input type="checkbox" name="checkbox" id="themeCheckbox">
+            <label for="checkbox" id="themeCheckboxLabel" class="label">
+              <div class="box"></div>
+            </label>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section id="mainSection">
+
+    <img id="mainImg" class="main-img" src="/online-web-tools/img/gerador-de-senhas-dark.png" alt="Gerenciador de Senhas" />
+
+    <main class="container-input">
+        <span> Tamanho <span id="valor"> </span> caracteres </span>
+        <input id="slider" class="slider" type="range" min="5" max="25" value="15"/>
+
+        <button id="generateButton" class="generateButton"> Gerar Senha</button>
+    </main>
+    
+    <div id="container-password" class="container-password hide">
+        <span class="title">Sua senha foi gerada:</span>
+        <span id="password" class="password"></span>
+        <span class="tooltip">Clique na senha para copiar. ✌️</span>
+    </div>
+
+    
+  </section>
+    
+  <footer id="footer">
+    <p> 
+      Todos os direitos reservados &copy; 2024 
+      | Desenvolvido com ❤️ por <strong>Willian D. Daniel</strong>
+    </p>
+  </footer>
+</body>
+
+</html>

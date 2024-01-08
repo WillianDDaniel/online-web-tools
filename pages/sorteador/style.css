@@ -1,0 +1,103 @@
+@import url(../../main-style.css);
+
+section {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--white);
+}
+
+section h1 {
+    font-size: 2.5rem;
+}
+
+.title {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.config > span {
+    font-size: 1.7rem;
+}
+
+.config > span:last-of-type {
+    margin-left: 50px;
+}
+
+.config div:last-child {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+input[type='number'] {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 5px;
+    vertical-align: middle;
+    color: var(--black);
+}
+
+label span {
+    margin-left: 5px;
+}
+
+.repeatNumberLabel {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.generate {
+    padding: 8px 16px;
+    margin: 10px;
+    background-color: #3EB72B;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.generate:hover {
+    background-color: #248c13;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s forwards;
+    margin: 5px;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.result {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.result span {
+    font-style: italic;
+    margin: 10px 5px 0 0 ;
+    font-size: 1rem;
+}
+
+.result div {
+    padding: 5px 10px;
+    background-color: #0056b3;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: var(--white);
+}

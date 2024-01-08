@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="/assets/img/online-web-tools.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Sorteador de números aletórios, sorteio online">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Sorteador de Números</title>
+
+</head>
+
+<body >
+
+  <nav id="navBar">
+    <input type="checkbox"> <!-- This input is hide -->
+
+    <a class="logo-link" href="/"><h2 class="logo">Online<span>Web</span><i>Tools</i></h2></a>
+
+    <ul class="nav-items">
+
+      <li><a href="/">Inicio</a></li>
+
+      <li> <!-- whitemode -->
+        <div>
+          <div class="themeToggle">
+            <label class="themeText">White Mode</label>
+            <input type="checkbox" name="checkbox" id="themeCheckbox">
+            <label for="checkbox" id="themeCheckboxLabel" class="label">
+              <div class="box"></div>
+            </label>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section id="mainSection">
+
+    <h1 class="title">Sorteador de Números</h1>
+
+    <div class="config">
+
+      <span>
+        Sortear
+        <input id="numberSweep" type="number" placeholder="1" min="1">
+        Número(s)
+      </span>
+      <br>
+      <span>
+        De
+        <input id="minNumber" type="number" placeholder="1" min="0" max="999999999" required>
+        à
+        <input id="maxNumber" type="number" placeholder="100" min="1" max="999999999" required>
+      </span>
+
+      <div>
+        <label id="repeatNumberLabel" class="repeatNumberLabel" for="repeatNumber">
+          <input id="repeatNumber" type="checkbox"> <span> Não Repetir Número </span>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <button class="generate" id="generate">Sortear</button>
+    </div>
+
+    <div id="result" class=" result">
+    </div>
+
+  </section>
+
+  <footer id="footer">
+    <p> 
+      Todos os direitos reservados &copy; 2024 
+      | Desenvolvido com ❤️ por <strong>Willian D. Daniel</strong>
+    </p>
+  </footer>
+
+  <script type="module" src="../../main.js"></script>
+  <script type="module" src="scripts.js"></script>
+
+</body>
+</html>

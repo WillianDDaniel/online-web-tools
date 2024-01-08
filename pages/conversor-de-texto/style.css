@@ -1,0 +1,33 @@
+@import url(../../main-style.css);
+
+/* Estilos simples para o layout */
+section {
+    min-height: 82vh;
+    text-align: center;
+}
+
+section>h2 {
+    padding: 10px;
+}
+
+.inputText {
+    padding: 5px 10px;
+    resize: none;
+    outline: none;
+}
+
+.generateButton {
+    padding: 8px 16px;
+    margin: 10px;
+    background-color: #3EB72B;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.generateButton:hover {
+    background-color: #248c13;
+}

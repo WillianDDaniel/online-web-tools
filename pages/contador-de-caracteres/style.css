@@ -1,0 +1,33 @@
+@import url(../../main-style.css);
+
+section {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textInput {
+    max-width: 85%;
+    resize: none;
+    padding: 5px 10px;
+    outline: none;
+}
+
+section>h2 {
+    margin: 15px 0;
+}
+
+section>div {
+    display: flex;
+    margin: 10px 0;
+}
+
+section>div>p {
+    margin: 0 15px;
+}
+
+.result>p>span {
+    font-weight: bold;
+    margin-left: 5px;
+}
