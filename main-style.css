@@ -11,10 +11,12 @@
 
 .logo {
     margin-left: 20px;
+    color: inherit;
 }
 
 .logo-link {
     text-decoration: none;
+    color: inherit;
 }
 
 .logo-link:visited {

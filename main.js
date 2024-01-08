@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer.classList.add('main-wt-mode', 'wt-mode')
 
             mainImg
-                ? mainImg.src = '/img/gerador-de-senhas-white.png'
+                ? mainImg.src = 'https://animecharacters.sirv.com/online-web-tools/gerador-de-senhas-white.png'
                 : ""
 
         } else {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer.classList.add('main-dk-mode')
 
             mainImg
-                ? mainImg.src = '/img/gerador-de-senhas-dark.png'
+                ? mainImg.src = 'https://animecharacters.sirv.com/online-web-tools/gerador-de-senhas-dark.png'
                 : ""
         }
     }
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer.classList.add('main-wt-mode', 'wt-mode')
 
             mainImg
-                ? mainImg.src = '/img/gerador-de-senhas-white.png'
+                ? mainImg.src = 'https://animecharacters.sirv.com/online-web-tools/gerador-de-senhas-white.png'
                 : ""
 
             localStorage.setItem('isChecked', "true")
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer.classList.add('main-dk-mode')
 
             mainImg
-                ? mainImg.src = '/img/gerador-de-senhas-dark.png'
+                ? mainImg.src = 'https://animecharacters.sirv.com/online-web-tools/gerador-de-senhas-dark.png'
                 : ""
 
             localStorage.setItem('isChecked', "false")
