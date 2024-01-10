@@ -1,9 +1,15 @@
+// input slider element to choose a size to the new password
 const sliderElement = document.getElementById("slider")
-const generateButton = document.getElementById("generateButton")
 const sizePassword = document.getElementById("valor")
+
+// run button
+const generateButton = document.getElementById("generateButton")
+
+// element to show generated password
 const password = document.getElementById("password")
 const containerPassword = document.getElementById("container-password")
 
+// range of characters to make a new password
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@"
 
 let newPass = ""
@@ -15,26 +21,33 @@ slider.oninput = function () {
 }
 
 generateButton.addEventListener('click', generatePassword)
+
 function generatePassword() {
 
     let pass = ""
 
+    // runner for generate a new password
     for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
         pass += charset.charAt(Math.floor(Math.random() * n))
     }
 
+    // show on the screen the new password
     containerPassword.classList.remove("hide")
     password.innerHTML = pass
     newPass = pass
 }
 
+// listener button to copy the new password 
 containerPassword.addEventListener('click', copyPassword )
 function copyPassword() {
+
+    // make to make sure a copy of the new password
     if (!navigator.clipboard) {
         fallbackCopyTextToClipboard(newPass)
         return
     }
 
+    // if navigator clipboard is enable, copy pass
     navigator.clipboard.writeText(newPass)
         .then(() => {
             alert("Senha copiada com sucesso!")
@@ -45,6 +58,7 @@ function copyPassword() {
         })
 }
 
+// if navigator clipboard is wrong, call this function
 function fallbackCopyTextToClipboard(text) {
     const textArea = document.createElement("textarea")
     textArea.value = text

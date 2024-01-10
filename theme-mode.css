@@ -2,22 +2,30 @@
     /* Dark Mode Colors */
     --bg-black: #18181b;
     --main-black-color: #101010;
-    --secondary-black-color: #000000;
+    --secondary-black-color: #232323;
 
     /* White Mode Colors */
     --white: #f1f1f1;
     --main-white-color: #ffffff;
     --secondary-white-color: #ededed;
+
+    /* standard color */
+    --button-color: #3EB72B;
+    --button-color-hover: #248c13;
 }
 
 .dk-mode {
-    /* background: linear-gradient(180deg, rgba(0,0,0,1) 25%, rgba(15,15,15,1) 50%, rgba(6,7,6,1) 100%); */
     background-color: var(--bg-black);
     color: var(--white);
 }
 
 .wt-mode {
-    background: linear-gradient(180deg, rgba(255,255,255,1) 25%, rgba(251,251,250,1) 50%, rgba(243,243,243,1) 100%);
+    background: linear-gradient(180deg, 
+    rgba(255,255,255,1) 25%, 
+    rgba(251,251,250,1) 50%, 
+    rgba(239,239,239,1) 100%);
+
+    color: var(--black);
 }
 
 .main-dk-mode {
@@ -26,10 +34,20 @@
 }
 
 .main-wt-mode {
+    background-color: var(--main-white-color);
     color: var(--black);
 }
 
-.second-dk-mode {
-    background-color: var(--secondary-black-color);
-    color: var(--white);
+.secondary-wt-mode {
+    background-color: var(--secondary-white-color);
+    color: var(--black);
+}
+
+/* classes just for the toogleMenu Lines */
+.toogle-wt {
+    background: var(--secondary-black-color);
+}
+
+.toogle-dk {
+    background: var(--secondary-white-color);
 }

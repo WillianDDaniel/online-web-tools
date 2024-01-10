@@ -11,6 +11,7 @@ section>h2 {
 }
 
 .inputText {
+    max-width: 85%;
     padding: 5px 10px;
     resize: none;
     outline: none;
@@ -19,7 +20,7 @@ section>h2 {
 .generateButton {
     padding: 8px 16px;
     margin: 10px;
-    background-color: #3EB72B;
+    background-color: var(--button-color);
     border: 0;
     border-radius: 4px;
     cursor: pointer;
@@ -29,5 +30,5 @@ section>h2 {
 }
 
 .generateButton:hover {
-    background-color: #248c13;
+    background-color: var(--button-color-hover);
 }

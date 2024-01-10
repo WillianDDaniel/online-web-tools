@@ -1,10 +1,10 @@
 @import url(./main-style.css);
 
-
 section {
     min-height: 82vh;
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
 }
 
 .mainSection>ul>li {

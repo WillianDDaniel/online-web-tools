@@ -55,7 +55,7 @@ label span {
 .generate {
     padding: 8px 16px;
     margin: 10px;
-    background-color: #3EB72B;
+    background-color: var(--button-color);
     border: 0;
     border-radius: 4px;
     cursor: pointer;
@@ -65,7 +65,7 @@ label span {
 }
 
 .generate:hover {
-    background-color: #248c13;
+    background-color: var(--button-color-hover);
 }
 
 .fade-in {

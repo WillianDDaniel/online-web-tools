@@ -127,7 +127,6 @@ nav>input {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
@@ -147,7 +146,7 @@ nav>input {
 nav>input:checked~.menuToggle>span {
     opacity: 1;
     transform: rotate(-45deg) translate(0px, 2px);
-    background: #232323;
+    background: #767676;
 }
 
 nav>input:checked~.menuToggle>span:nth-last-child(3) {
@@ -159,6 +158,13 @@ nav>input:checked~.menuToggle>span:nth-last-child(2) {
     transform: rotate(45deg) translate(-5px, -9px);
 }
 /* End config for toggleMenu */
+
+footer {
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 900px) {
 
@@ -202,21 +208,4 @@ nav>input:checked~.menuToggle>span:nth-last-child(2) {
         align-items: center;
         gap: 5px;
     }
-
-    .container-projects {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .container-projects article {
-        width: 90%;
-    }
-
-}
-
-footer {
-    height: 9vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

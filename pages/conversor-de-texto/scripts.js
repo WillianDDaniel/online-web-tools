@@ -1,4 +1,4 @@
-// Funções para converter texto
+// function to convert the text to Upper Case
 function convertToUpperCase() {
     let text = document.getElementById('inputText');
     let convertedText = text.value.toUpperCase();
@@ -6,6 +6,7 @@ function convertToUpperCase() {
 }
 document.getElementById('toUpperCase').addEventListener('click', convertToUpperCase )
 
+// function to convert the text to Lower Case
 function convertToLowerCase() {
     let text = document.getElementById('inputText');
     let convertedText = text.value.toLowerCase();
