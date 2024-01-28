@@ -54,10 +54,59 @@ section {
     color: inherit;
 }
 
+.webTools p {
+    text-align: center;
+}
+
 .webTools h3 {
     width: 100%;
     text-align: center;
     margin-bottom: 5px;
     padding: 1px 30px;
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+    .webTools {
+        margin-bottom: 30px;
+    }
+
+    .webTools div {
+        max-width: 90vw;
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    .webTools {
+        margin-top: 15px;
+    }
+
+    .webTools div {
+        max-width: 90vw;
+        height: auto;
+        min-height: 100px;
+        overflow: hidden;
+    }
+
+    .webTools h3 {
+        font-size: 1rem;
+    }
+
+    .webTools a {
+        margin: -10px 0;
+    }
+}
+
+@media screen and (max-width: 280px) {
+
+    .webTools h3 {
+        font-size: 0.9rem;
+    }
+
+    .webTools p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
 }

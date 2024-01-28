@@ -98,7 +98,7 @@ nav {
     border-radius: 50%;
     transition: 0.5s;
 }
-/* End config for toggle Theme */
+/* End config for toggleTheme */
 
 /* config for the toggleMenu */
 .menuToggle {
@@ -164,6 +164,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 0 10px;
 }
 
 @media screen and (max-width: 900px) {
@@ -207,5 +209,46 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo-link {
+        margin-right: 50px;
+        font-size: 0.95rem;
+    }
+
+    footer {
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .logo-link {
+        font-size: 80%;
+    }
+
+    .menuToggle {
+        right: 15px;
+    }
+
+    .menuToggle>span {
+        width: 30px;
+        height: 3px;
+    }
+
+    nav>input {
+        right: 15px;
+        width: 30px;
+        height: 25px;
+    }
+
+    footer {
+        height: auto;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        padding: 10px 5px;
     }
 }
