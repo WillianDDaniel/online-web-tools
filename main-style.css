@@ -219,7 +219,9 @@ footer {
     }
 
     footer {
-        height: 10vh;
+        min-height: 10vh;
+        height: auto;
+        padding: 5px 5px;
     }
 }
 
