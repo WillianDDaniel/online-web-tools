@@ -100,6 +100,10 @@ section {
 
 @media screen and (max-width: 280px) {
 
+    .mainSection>h2 {
+        margin-bottom: 5px;
+    }
+
     .webTools h3 {
         font-size: 0.9rem;
     }

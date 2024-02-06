@@ -3,7 +3,7 @@
 section {
     background-color: var(--bg-black);
     width: 100%;
-    height: 82vh;
+    min-height: 82vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -109,3 +109,70 @@ section {
     bottom: 20px;
     opacity: 1;
 }
+
+@media screen and (max-width: 900px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .main-img {
+        width: 90%;
+    }
+
+    .container-input {
+        width: 65%;
+    }
+
+    .generateButton {
+        height: auto;
+        width: auto;
+        padding: 10px 10px;
+        margin-top: 30px;
+    }
+
+    .container-password {
+        max-width: 70%;
+    }
+
+    .title {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container-input {
+        width: 75%;
+    }
+
+    .container-input span {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .container-password {
+        max-width: 85%;
+        
+    }
+
+    .password {
+        padding: 0px 15px;
+        font-size: 0.85rem;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    .tooltip {
+        margin-bottom: 15px;
+    }
+}
+
