@@ -16,6 +16,7 @@ section {
 
 section>h2 {
     margin: 15px 0;
+    text-align: center;
 }
 
 section>div {
@@ -30,4 +31,37 @@ section>div>p {
 .result>p>span {
     font-weight: bold;
     margin-left: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    .result {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .result p {
+        padding: 7px 20px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    section>h2 {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .result {
+        flex-wrap: wrap;
+    }
+
+    .result p {
+        padding: 7px 5px;
+    }
 }
