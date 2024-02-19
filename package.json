@@ -1,7 +1,9 @@
 {
-  "name": "online-tools",
+  "name": "online-web-tools",
   "private": true,
-  "version": "1.0.0",
+  "author": "Willian-D-Daniel",
+  "description": "A simple web project with a homepage and four distinct apps: online number generator, random password generator, text case converter, and word/character counter. Built using HTML, CSS, and JavaScript without external libraries. Responsive design with support for both light and dark themes.",
+  "version": "1.0.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,5 +12,19 @@
   },
   "devDependencies": {
     "vite": "^5.0.8"
-  }
+  },
+  "keywords": [
+    "web development",
+    "fullstack",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "responsive design",
+    "number generator",
+    "password generator",
+    "text converter",
+    "word counter",
+    "light theme",
+    "dark theme"
+  ]
 }
