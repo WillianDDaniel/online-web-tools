@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/Online-Web-Tools/',
+    base: '/online-web-tools/',
     build: {
         outDir: 'dist',
         rollupOptions: {
