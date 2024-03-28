@@ -39,7 +39,7 @@ input[type='number'] {
     width: 70px;
     height: 32px;
     border-radius: 5px;
-    margin: 10px 0;
+    margin: 10px 0px;
     padding: 5px;
     vertical-align: middle;
     color: var(--main-black-color);
