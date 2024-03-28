@@ -3,8 +3,7 @@
 ## Descrição Geral
 Este projeto consiste em um site simples com uma página inicial e quatro aplicativos distintos. 
 
-Cada aplicativo tem uma função específica: um sorteado de números online, um gerador de senhas aleatórias, um conversor de texto entre maiúsculo e minúsculo, e um - 
-contador de palavras e caracteres. 
+Cada aplicativo tem uma função específica: um sorteador de números online, um gerador de senhas aleatórias, um conversor de texto entre maiúsculo e minúsculo, e um contador de palavras e caracteres. 
 
 O site é construído utilizando **HTML**, **CSS** e **JavaScript**, sem depender de bibliotecas externas. Além disso, o projeto é responsivo, oferecendo suporte aos temas claro e escuro.
 
