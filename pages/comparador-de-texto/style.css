@@ -1,0 +1,153 @@
+@import url(../../main-style.css);
+
+section {
+    min-height: 82vh;
+    text-align: center;
+    padding: 30px;
+}
+
+section > h2 {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.mainSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-area-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.text-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-title {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.mainSection > h2 {
+    width: 100%;
+    color: inherit;
+}
+
+.mainSection h3 {
+    width: 100%;
+    color: inherit;
+}
+
+.inputText {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.inputText:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+}
+
+.option-checkbox {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.compareButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.compareButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.compareButton:active {
+    transform: translateY(0);
+}
+
+#result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .text-area-container {
+        flex-direction: column;
+    }
+
+    .text-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .options-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 10px;
+    }
+}

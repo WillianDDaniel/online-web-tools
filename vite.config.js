@@ -13,6 +13,7 @@ export default defineConfig({
                 raffle: resolve(__dirname, 'pages/sorteador/index.html'),
                 textConverter: resolve(__dirname, 'pages/conversor-de-texto/index.html'),
                 characterCounter: resolve(__dirname, 'pages/contador-de-caracteres/index.html'),
+                textComparator: resolve(__dirname, 'pages/comparador-de-texto/index.html'),
             },
         },
         cssMinify: 'lightningcss',

@@ -1,15 +1,15 @@
 # Online Web Tools - WebSite
 
 ## Descrição Geral
-Este projeto consiste em um site simples com uma página inicial e quatro aplicativos distintos. 
+Este projeto consiste em um site simples com uma página inicial e quatro aplicativos distintos.
 
-Cada aplicativo tem uma função específica: um sorteador de números online, um gerador de senhas aleatórias, um conversor de texto entre maiúsculo e minúsculo, e um contador de palavras e caracteres. 
+Cada aplicativo tem uma função específica: um sorteador de números online, um gerador de senhas aleatórias, um conversor de texto entre maiúsculo e minúsculo, e um contador de palavras e caracteres.
 
 O site é construído utilizando **HTML**, **CSS** e **JavaScript**, sem depender de bibliotecas externas. Além disso, o projeto é responsivo, oferecendo suporte aos temas claro e escuro.
 
 ## Visualize o Projeto ao Vivo:
 
-Clique no link visualizar - 
+Clique no link visualizar -
 [https://willianddaniel.github.io/online-web-tools/](https://willianddaniel.github.io/online-web-tools/)
 
 ## Screenshots
@@ -21,9 +21,9 @@ Clique no link visualizar -
 # Estrutura de Pastas
 A estrutura de pastas do projeto é organizada da seguinte forma:
 
-**raiz do projeto/:** Contém a página inicial do site.  
-**/pages:** Pasta que contém os quatro aplicativos, cada um em sua respectiva subpasta.  
-**/dist:** Pasta que contém o build pronto do projeto, gerado utilizando Vite.  
+**raiz do projeto/:** Contém a página inicial do site.
+**/pages:** Pasta que contém os quatro aplicativos, cada um em sua respectiva subpasta.
+**/dist:** Pasta que contém o build pronto do projeto, gerado utilizando Vite.
 
 ## Funcionalidades dos Aplicativos
 

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="https://animecharacters.sirv.com/online-web-tools/online-web-tools.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="keywords" content="comparador de texto, compare 2 textos, comparação entre textos">
+  <meta name="description" content="Online Web Tools - Ferramentas online, comparador de texto, compare 2 textos">
+  <meta name="author" content="Willian Deviti Daniel">
+
+  <title>Comparador de Texto | Online Web Tools</title>
+  <script type="module" crossorigin src="/online-web-tools/assets/textComparator-VXJ5x-sq.js"></script>
+  <link rel="modulepreload" crossorigin href="/online-web-tools/assets/main-CVzIHhWm.js">
+  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/textComparator-CFMxgo4F.css">
+</head>
+
+<body>
+
+  <nav id="navBar">
+    <input type="checkbox"> <!-- This input is hide -->
+
+    <a class="logo-link" href="/online-web-tools/">
+      <h2 class="logo">Online<span>Web</span><i>Tools</i></h2>
+    </a>
+
+    <ul class="nav-items">
+
+      <li><a href="/online-web-tools/">Inicio</a></li>
+
+      <li> <!-- whitemode -->
+        <div>
+          <div class="themeToggle">
+            <label class="themeText">White Mode</label>
+            <input type="checkbox" name="checkbox" id="themeCheckbox">
+            <label for="checkbox" id="themeCheckboxLabel" class="label">
+              <div class="box"></div>
+            </label>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="menuToggle">
+      <span class="toogleLines"></span>
+      <span class="toogleLines"></span>
+      <span class="toogleLines"></span>
+    </div>
+  </nav>
+
+  <section id="mainSection" class="mainSection">
+    <h2>Comparador de Texto</h2>
+    <div class="text-area-container">
+      <div class="text-column">
+        <h3 class="text-title">Texto 1</h3>
+        <textarea id="textA" class="inputText" placeholder="Digite o primeiro texto aqui" rows="10"
+          cols="60"></textarea>
+      </div>
+      <div class="text-column">
+        <h3 class="text-title">Texto 2</h3>
+        <textarea id="textB" class="inputText" placeholder="Digite o segundo texto aqui" rows="10" cols="60"></textarea>
+      </div>
+    </div>
+
+    <div class="options-container">
+      <label class="option-label">
+        <input type="checkbox" id="ignoreCase" class="option-checkbox">
+        Ignorar maiúsculas/minúsculas
+      </label>
+      <label class="option-label">
+        <input type="checkbox" id="ignoreSpaces" class="option-checkbox">
+        Ignorar espaços
+      </label>
+    </div>
+
+    <div class="button-container">
+      <button class="compareButton" id="compareButton">Comparar Textos</button>
+      <p id="result"></p>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <p>
+      Todos os direitos reservados &copy; 2025.
+      Desenvolvido com ❤️ por <strong>Willian D. Daniel</strong>
+    </p>
+  </footer>
+
+
+</body>
+
+</html>

@@ -8,12 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
 
-  <meta name="keywords" content="conversor de texto, conveter texto pra Maiúsculas, conversor de texto pra Minúsculas">
-  <meta name="description"
-    content="Online Web Tools - Ferramentas online, convesor de texto pra letras Maiúsculas ou Minúsculas">
+  <meta name="keywords" content="comparador de texto, compare 2 textos, comparação entre textos">
+  <meta name="description" content="Online Web Tools - Ferramentas online, comparador de texto, compare 2 textos">
   <meta name="author" content="Willian Deviti Daniel">
 
-  <title>Conversor de Texto | Online Web Tools</title>
+  <title>Comparador de Texto | Online Web Tools</title>
 </head>
 
 <body>
@@ -51,21 +50,39 @@
   </nav>
 
   <section id="mainSection" class="mainSection">
+    <h2>Comparador de Texto</h2>
+    <div class="text-area-container">
+      <div class="text-column">
+        <h3 class="text-title">Texto 1</h3>
+        <textarea id="textA" class="inputText" placeholder="Digite o primeiro texto aqui" rows="10"
+          cols="60"></textarea>
+      </div>
+      <div class="text-column">
+        <h3 class="text-title">Texto 2</h3>
+        <textarea id="textB" class="inputText" placeholder="Digite o segundo texto aqui" rows="10" cols="60"></textarea>
+      </div>
+    </div>
 
-    <h2>Conversor de Texto</h2>
-    <textarea type="text" class="inputText" id="inputText" placeholder="Digite o texto aqui" rows="15"
-      cols="120"></textarea>
-    <br>
-    <button class="generateButton" id="toUpperCase">Converter para Maiúsculas</button>
-    <button class="generateButton" id="toLowerCase">Converter para Minúsculas</button>
-    <br>
-    <p id="resultado"></p>
+    <div class="options-container">
+      <label class="option-label">
+        <input type="checkbox" id="ignoreCase" class="option-checkbox">
+        Ignorar maiúsculas/minúsculas
+      </label>
+      <label class="option-label">
+        <input type="checkbox" id="ignoreSpaces" class="option-checkbox">
+        Ignorar espaços
+      </label>
+    </div>
 
+    <div class="button-container">
+      <button class="compareButton" id="compareButton">Comparar Textos</button>
+      <p id="result"></p>
+    </div>
   </section>
 
   <footer id="footer">
     <p>
-      Todos os direitos reservados &copy; 2024.
+      Todos os direitos reservados &copy; 2025.
       Desenvolvido com ❤️ por <strong>Willian D. Daniel</strong>
     </p>
   </footer>

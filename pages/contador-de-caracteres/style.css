@@ -34,7 +34,6 @@ section>div>p {
 }
 
 @media screen and (max-width: 900px) {
-    
     body {
         overflow-x: hidden;
     }
@@ -51,7 +50,6 @@ section>div>p {
 }
 
 @media screen and (max-width: 400px) {
-
     section>h2 {
         font-size: 1.1rem;
         padding: 0 10px;
