@@ -1,73 +1,140 @@
-# Online Web Tools - WebSite
+# 🛠️ Online Web Tools
 
-## Descrição Geral
-Este projeto consiste em um site simples com uma página inicial e quatro aplicativos distintos.
+[![Estado do Projeto](https://img.shields.io/badge/estado-ativo-brightgreen)](https://willianddaniel.github.io/online-web-tools/)
+[![Licença](https://img.shields.io/badge/licença-MIT-blue)](LICENSE)
+[![Responsivo](https://img.shields.io/badge/responsivo-sim-success)](https://willianddaniel.github.io/online-web-tools/)
 
-Cada aplicativo tem uma função específica: um sorteador de números online, um gerador de senhas aleatórias, um conversor de texto entre maiúsculo e minúsculo, e um contador de palavras e caracteres.
+## 📋 Descrição Geral
 
-O site é construído utilizando **HTML**, **CSS** e **JavaScript**, sem depender de bibliotecas externas. Além disso, o projeto é responsivo, oferecendo suporte aos temas claro e escuro.
+Um conjunto de ferramentas web gratuitas e acessíveis para uso diário. Este projeto consiste em um site intuitivo com uma página inicial e cinco aplicativos úteis, cada um projetado para resolver problemas específicos.
 
-## Visualize o Projeto ao Vivo:
+### 🔗 [Visualize o Projeto ao Vivo](https://willianddaniel.github.io/online-web-tools/)
 
-Clique no link visualizar -
-[https://willianddaniel.github.io/online-web-tools/](https://willianddaniel.github.io/online-web-tools/)
+## 📱 Screenshots
 
-## Screenshots
+<div align="center">
+  <img src="https://animecharacters.sirv.com/screenshots/online-web-tools-white-mode.png" alt="Modo Claro" width="400"/>
+  <img src="https://animecharacters.sirv.com/screenshots/online-web-tools-dark-mode.png" alt="Modo Escuro" width="400"/>
+</div>
 
-![White-Mode Screenshot](https://animecharacters.sirv.com/screenshots/online-web-tools-white-mode.png)
-![Dark-Mode Screenshot](https://animecharacters.sirv.com/screenshots/online-web-tools-dark-mode.png)
+## 🧰 Ferramentas Disponíveis
 
+### 🎲 Sorteador de Números Aleatórios
+Gere números aleatórios rapidamente dentro de intervalos personalizados.
 
-# Estrutura de Pastas
-A estrutura de pastas do projeto é organizada da seguinte forma:
+### 🔐 Gerador de Senhas Aleatórias
+Crie senhas seguras e aleatórias com opções personalizáveis de complexidade.
 
-**raiz do projeto/:** Contém a página inicial do site.
-**/pages:** Pasta que contém os quatro aplicativos, cada um em sua respectiva subpasta.
-**/dist:** Pasta que contém o build pronto do projeto, gerado utilizando Vite.
+### 🔄 Conversor de Texto
+Transforme textos entre maiúsculo e minúsculo com facilidade.
 
-## Funcionalidades dos Aplicativos
+### 📊 Contador de Palavras e Caracteres
+Analise seu texto com estatísticas detalhadas de palavras e caracteres.
 
-### Sorteador de Números Aleatórios:
-- Gera números aleatórios de forma online.
+### 🔍 Comparador de Textos
+Compare dois textos e identifique as diferenças entre eles.
 
-### Gerador de Senhas Aleatórias:
-- Cria senhas seguras e aleatórias.
+## 🌓 Temas
 
-### Conversor de Texto:
-- Converte o texto entre maiúsculo e minúsculo.
+O site oferece suporte a temas claro e escuro persistentes para melhor adaptação às preferências do usuário. A seleção de tema é salva automaticamente para visitas futuras.
 
-### Contador de Palavras e Caracteres:
-- Conta o número de palavras e caracteres em um texto.
+## 📱 Responsividade
 
-## Temas
-O site oferece suporte aos temas claro e escuro persistentes para melhor adaptação às preferências do usuário.
+O layout do site foi cuidadosamente desenvolvido para ser totalmente responsivo, garantindo uma experiência consistente e agradável em:
+- 💻 Desktops
+- 💻 Laptops
+- 📱 Tablets
+- 📱 Smartphones
 
-## Responsividade
-O layout do site foi desenvolvido para ser totalmente responsivo, garantindo uma experiência consistente em diferentes dispositivos e tamanhos de tela.
+## 🧩 Tecnologias Utilizadas
 
-## Build Pronto
-Na pasta dist, você encontrará o build pronto do projeto, gerado utilizando Vite. Este build pode ser implantado para hospedagem.
+Este projeto foi construído utilizando tecnologias web fundamentais, sem dependências externas:
 
-## Como Contribuir
-Sinta-se à vontade para contribuir para este projeto. Caso encontre algum problema ou tenha sugestões de melhorias, por favor, abra uma issue no repositório.
+- **HTML5** - Estruturação semântica
+- **CSS3** - Estilização moderna e responsiva
+- **JavaScript** - Lógica e interatividade
+- **Vite** - Build e otimização
 
-### Executando Localmente
-Se precisar executar o projeto localmente, siga os passos abaixo:
+## 📁 Estrutura de Pastas
 
-### Clone este repositório:
-
-```bash
-git clone https://github.com/WillianDDaniel/online-web-tools
+```
+online-web-tools/
+├── index.html                    # Página inicial
+├── pages/                        # Aplicativos individuais
+│   ├── sorteador/                # Sorteador de números
+│   ├── gerador-de-senhas/        # Gerador de senhas
+│   ├── conversor-de-texto/       # Conversor de texto
+│   ├── contador-de-caracteres/   # Contador de palavras
+│   └── comparador-de-texto/      # Comparador de textos
+├── assets/                       # Recursos compartilhados
+│   ├── css/
+│   └── js/
+└── dist/                         # Build pronto para produção
 ```
 
-### Navegue até o diretório do projeto:
+## 🚀 Como Executar Localmente
+
+### Pré-requisitos
+- Node.js (versão recomendada: 14.x ou superior)
+- npm ou yarn
+
+### Instalação
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/WillianDDaniel/online-web-tools
+   ```
+
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd online-web-tools
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+5. Abra o navegador e acesse:
+   ```
+   http://localhost:5173/online-web-tools/
+   ```
+
+## 📦 Build para Produção
+
+Para gerar uma versão otimizada para produção:
 
 ```bash
-cd online-web-tools
+npm run build
+# ou
+yarn build
 ```
-### Rode o projeto, executando o comando:
 
-```bash
-npm run dev
-```
-Abra o navegador e acesse http://localhost:5173/online-web-tools/ para visualizar o site.
+Os arquivos de build estarão disponíveis na pasta `dist/`.
+
+## 🤝 Como Contribuir
+
+Contribuições são sempre bem-vindas! Siga estes passos:
+
+1. Faça um fork do projeto
+2. Crie sua branch de feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+### 🐛 Reportando Problemas
+
+Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/WillianDDaniel/online-web-tools/issues) detalhando o problema ou a melhoria proposta.
+
+## 📜 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.

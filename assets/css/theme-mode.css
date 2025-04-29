@@ -20,9 +20,9 @@
 }
 
 .wt-mode {
-    background: linear-gradient(180deg, 
-    rgba(255,255,255,1) 25%, 
-    rgba(251,251,250,1) 50%, 
+    background: linear-gradient(180deg,
+    rgba(255,255,255,1) 25%,
+    rgba(251,251,250,1) 50%,
     rgba(239,239,239,1) 100%);
 
     color: var(--black);
