@@ -24,7 +24,7 @@
 }
 
 .header {
-  height: 60px;
+  height: 70px;
   background-color: var(--primary-color);
   font-weight: 700;
   display: flex;
@@ -47,6 +47,7 @@
 .header .logo {
   color: var(--text-light);
   margin-left: 5px;
+  font-size: 18px;
 }
 
 .header .logo span {
@@ -125,7 +126,7 @@ background: #232323;
 }
 
 .footer {
-  background-color: var(--background-light);
+  background-color: var(--background-dark);
   color: var(--text-light);
   padding: 3rem 3rem 1.5rem 3rem;
   margin-top: 4rem;
@@ -157,13 +158,11 @@ background: #232323;
   width: 28px;
   height: 28px;
   margin-right: 0.5rem;
-  color: var(--text-dark);
 }
 
 .footer-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text-dark);
 }
 
 .footer-title span {
@@ -171,7 +170,6 @@ background: #232323;
 }
 
 .footer-tagline {
-  color: var(--text-dark);
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
   opacity: 0.8;
@@ -191,7 +189,6 @@ background: #232323;
   font-size: 1.1rem;
   margin-bottom: 1rem;
   margin-left: 10px;
-  color: var(--primary-color);
   position: relative;
   padding-bottom: 8px;
 }
@@ -225,7 +222,7 @@ background: #232323;
 .footer-links-column a {
   display: flex;
   align-items: center;
-  color: var(--text-dark);
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
   font-size: 0.9rem;
@@ -255,14 +252,18 @@ background: #232323;
 .footer-bottom {
   margin-top: 3rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 }
 
 .copyright {
   font-size: 0.9rem;
-  color: var(--background-dark);
   opacity: 0.8;
+}
+
+.copyright a {
+  color: var(--text-light);
+  text-decoration: none;
 }
 
 .heart {
