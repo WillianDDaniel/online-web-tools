@@ -1,117 +1,219 @@
-@import url(./main-style.css);
-
-section {
-    min-height: 82vh;
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
-    padding-bottom: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.mainSection>ul>li {
-    list-style-type: none;
+:root {
+  --primary-color: #000000;
+  --primary-light: #6189c9;
+  --primary-dark: #345990;
+  --accent-color: #ff6b6b;
+  --text-light: #f8f9fa;
+  --text-dark: #343a40;
+  --background-light: #ffffff;
+  --background-dark: #212529;
+  --gray-light: #e9ecef;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.25);
+  --card-hover: #f0f7ff;
+  --card-hover-dark: #2c3e50;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
 }
 
-.mainSection>ul>li>a {
-    text-decoration: none;
-    color: inherit;
+.header {
+  height: 60px;
+  background-color: #232323;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.mainSection>h2 {
-    text-align: center;
-    width: 100%;
-    height: 80px;
-    padding-top: 15px;
+.header .logo-container {
+  display: flex;
+  align-items: center;
 }
 
-.webTools {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
+.header .tools-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+    color: #FFFFFF;
 }
 
-.webTools div {
-    width: 400px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.09);
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px 5px rgba(125, 125, 125, 0.1);
-    border-right: 1px solid var(--bg-black);
-    border-left: 1px solid var(--bg-black);
+.header .logo {
+  color: #FFFFFF;
+  margin-left: 5px;
 }
 
-.webTools div:hover {
-    background-color: rgba(0, 0, 0, 0.25);
+.header .logo span {
+  color: rgb(228, 10, 10);
 }
 
-.webTools a {
-    text-decoration: none;
-    color: inherit;
+.toggle-menu-button {
+  position: absolute;
+  top: 17px;
+  right: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background-color: transparent;
+  z-index: 1;
 }
 
-.webTools p {
-    text-align: center;
+.toggle-menu-button .line {
+  display: block;
+  width: 28px;
+  height: 3.4px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  transform-origin: 4px 0px;
+  transition:
+    transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
 }
 
-.webTools h3 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 5px;
-    padding: 1px 30px;
-    background-color: rgba(255, 255, 255, 0.2);
+.toggle-menu-button .line-top-checked {
+  transform: rotate(45deg) translate(-2px, -1px);
+  transform-origin: 0% 0%;
+  background: #232323;
 }
 
-@media screen and (max-width: 900px) {
-    .webTools {
-        margin-bottom: 30px;
-    }
-
-    .webTools div {
-        max-width: 90vw;
-    }
+.toggle-menu-button .line-middle-checked {
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-@media screen and (max-width: 340px) {
-
-    .webTools {
-        margin-top: 15px;
-    }
-
-    .webTools div {
-        max-width: 90vw;
-        height: auto;
-        min-height: 100px;
-        overflow: hidden;
-    }
-
-    .webTools h3 {
-        font-size: 1rem;
-    }
-
-    .webTools a {
-        margin: -10px 0;
-    }
+.toggle-menu-button .line-bottom-checked {
+transform: rotate(-45deg) translate(0, -1px);
+transform-origin: 0% 100%;
+background: #232323;
 }
 
-@media screen and (max-width: 280px) {
+.toggle-theme-button {
+  width: 43px;
+  height: 18px;
+  background: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 0 5px;
+}
 
-    .mainSection>h2 {
-        margin-bottom: 5px;
-    }
+.toggle-theme-button .box {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #232323;
+}
 
-    .webTools h3 {
-        font-size: 0.9rem;
-    }
+.tools-section {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  text-align: center;
+}
 
-    .webTools p {
-        font-size: 0.8rem;
-        text-align: center;
-    }
+.tools-section .title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #232323;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.75rem;
+}
 
+.tools-section .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+.tools-section .tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tools-section .tools-container .tool-card {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.tools-container .tool-card div {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--gray-light);
+}
+
+.tools-container .tool-card div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.tools-container .tool-card div:hover {
+  box-shadow: 0 12px 30px var(--shadow-dark);
+  transform: translateY(-5px);
+}
+
+.tools-container .tool-card div:hover::before {
+  transform: scaleX(1);
+}
+
+.tools-container .tool-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #232323;
+}
+
+.tools-container .tool-card p {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.tools-container .tool-card span {
+  font-size: 2.25rem;
 }
