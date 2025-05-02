@@ -1,0 +1,98 @@
+.tools-section {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tools-section .title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #232323;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.75rem;
+}
+
+.tools-section .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+.tools-section .tools-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tools-section .tools-container .tool-card {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.tools-container .tool-card div {
+  background-color: var(--background-light);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--gray-light);
+}
+
+.tools-container .tool-card div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.tools-container .tool-card div:hover {
+  box-shadow: 0 12px 30px var(--shadow-dark);
+  transform: translateY(-5px);
+}
+
+.tools-container .tool-card div:hover::before {
+  transform: scaleX(1);
+}
+
+.tools-container .tool-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #232323;
+}
+
+.tools-container .tool-card p {
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.tools-container .tool-card span {
+  font-size: 2.25rem;
+}
