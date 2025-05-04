@@ -13,6 +13,12 @@
   <meta name="description" content="Online Web Tools - Ferramentas online, comparador de texto, compare 2 textos">
   <meta name="author" content="Willian Deviti Daniel">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
   <title>Comparador de Texto | Online Web Tools</title>
 </head>
 
@@ -43,36 +49,112 @@
     </div>
   </header>
 
-  <section id="mainSection" class="mainSection">
-    <h2>Comparador de Texto</h2>
-    <div class="text-area-container">
-      <div class="text-column">
-        <h3 class="text-title">Texto 1</h3>
-        <textarea id="textA" class="inputText" placeholder="Digite o primeiro texto aqui" rows="10"
-          cols="60"></textarea>
-      </div>
-      <div class="text-column">
-        <h3 class="text-title">Texto 2</h3>
-        <textarea id="textB" class="inputText" placeholder="Digite o segundo texto aqui" rows="10" cols="60"></textarea>
-      </div>
-    </div>
+  <main>
+    <section class="text-comparison-section">
+      <h1 class="title">Comparador de Texto Avançado</h1>
+      <p>Compare dois textos e obtenha informações detalhadas</p>
 
-    <div class="options-container">
-      <label class="option-label">
-        <input type="checkbox" id="ignoreCase" class="option-checkbox">
-        Ignorar maiúsculas/minúsculas
-      </label>
-      <label class="option-label">
-        <input type="checkbox" id="ignoreSpaces" class="option-checkbox">
-        Ignorar espaços
-      </label>
-    </div>
+      <div class="text-comparison-container">
+        <div class="text-input-column">
+          <div class="text-column-header">
+            <h3 class="text-column-title">Texto Original</h3>
+            <span class="character-count" id="countA">0 caracteres</span>
+          </div>
+          <textarea id="textA" class="text-editor" placeholder="Digite ou cole o texto original aqui"></textarea>
+        </div>
 
-    <div class="button-container">
-      <button class="compareButton" id="compareButton">Comparar Textos</button>
-      <p id="result"></p>
-    </div>
-  </section>
+        <div class="text-input-column">
+          <div class="text-column-header">
+            <h3 class="text-column-title">Texto Comparativo</h3>
+            <span class="character-count" id="countB">0 caracteres</span>
+          </div>
+          <textarea id="textB" class="text-editor" placeholder="Digite ou cole o texto comparativo aqui"></textarea>
+        </div>
+      </div>
+
+      <div class="comparison-options">
+        <div>
+          <input type="checkbox" id="ignoreCase" class="option-checkbox">
+          <label for="ignoreCase" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar maiúsculas/minúsculas
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Compara os textos ignorando diferenças entre maiúsculas e minúsculas</span>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ignoreSpaces" class="option-checkbox">
+          <label for="ignoreSpaces" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar espaços
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Remove todos os espaços antes de comparar os textos</span>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ignorePunctuation" class="option-checkbox">
+          <label for="ignorePunctuation" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar pontuação
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Remove pontuação antes de comparar os textos</span>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ignoreAccents" class="option-checkbox">
+          <label for="ignoreAccents" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar acentos
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Remove acentuação antes de comparar os textos</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="action-container">
+        <button id="compareButton" class="compare-button">Comparar Textos</button>
+
+        <div class="tool-buttons">
+          <button id="clearButton" class="clear-button">Limpar Textos</button>
+        </div>
+
+        <div class="extra-options">
+          <span id="swapTexts" class="extra-option">
+            <i>↔️</i> Trocar textos
+          </span>
+          <span id="highlightDiff" class="extra-option">
+            <i>🔍</i> Destacar diferenças
+          </span>
+        </div>
+      </div>
+
+      <div id="resultContainer" class="result-container">
+        <h3 id="resultTitle" class="result-title"></h3>
+
+        <div class="similarity-meter">
+          <div id="similarityBar" class="similarity-progress" style="width: 0%"></div>
+        </div>
+
+        <div id="similarityPercentage" class="similarity-percentage">0%</div>
+
+        <div id="differencesSection" class="differences-section">
+          <h4 class="differences-title">Principais diferenças encontradas:</h4>
+          <div id="differencesList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">
