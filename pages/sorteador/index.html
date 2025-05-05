@@ -7,8 +7,9 @@
   <link rel="shortcut icon" href="https://animecharacters.sirv.com/online-web-tools/online-web-tools.png"
     type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <meta name="keywords" content="Sorteador de números aletórios, sorteio online">
   <meta name="description" content="Online Web Tools - Ferramentas online, Sorteador de números aletórios">
@@ -51,40 +52,90 @@
     </div>
   </header>
 
-  <section id="mainSection">
-
-    <h1 class="title">Sorteador de Números</h1>
-
-    <div class="config">
-
-      <span>
-        Sortear
-        <input id="numberSweep" type="number" placeholder="1" min="1">
-        Número(s)
-      </span>
-      <br>
-      <span>
-        De
-        <input id="minNumber" type="number" placeholder="1" min="0" max="999999999" required>
-        à
-        <input id="maxNumber" type="number" placeholder="100" min="1" max="999999999" required>
-      </span>
-
-      <div>
-        <label id="repeatNumberLabel" class="repeatNumberLabel" for="repeatNumber">
-          <input id="repeatNumber" type="checkbox"> <span> Não Repetir Número </span>
-        </label>
+  <main>
+    <section class="raffle-container">
+      <div class="header-section">
+        <div class="icon-container">
+          <i class="fas fa-random"></i>
+        </div>
+        <h1>Gerador de Números Aleatórios</h1>
+        <p class="subtitle">Configure seus parâmetros e descubra sua sorte!</p>
       </div>
-    </div>
 
-    <div>
-      <button class="generate" id="generate">Sortear</button>
-    </div>
+      <div class="info-panel">
+        <p><i class="fas fa-info-circle"></i> Dica: Você pode sortear vários números únicos ou permitir repetições.</p>
+      </div>
 
-    <div id="result" class=" result">
-    </div>
+      <div class="card-controls">
+        <div class="control-panel">
+          <div class="form-row">
+            <div class="input-wrapper quantity">
+              <label for="numberSweep">Quantidade</label>
+              <div class="number-control">
+                <button class="btn-control minus" id="decreaseSweep">-</button>
+                <input id="numberSweep" type="number" min="1" value="1">
+                <button class="btn-control plus" id="increaseSweep">+</button>
+              </div>
+            </div>
+          </div>
 
-  </section>
+          <div class="form-row range">
+            <div class="input-wrapper">
+              <label for="minNumber">Mínimo</label>
+              <input id="minNumber" type="number" min="0" value="1">
+            </div>
+
+            <div class="range-separator">
+              <i class="fas fa-arrows-alt-h"></i>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="maxNumber">Máximo</label>
+              <input id="maxNumber" type="number" min="1" value="100">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="toggle-container" id="repeatNumberLabel">
+              <label for="repeatNumber">Números únicos</label>
+              <label class="switch">
+                <input type="checkbox" id="repeatNumber">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <button id="generate" class="btn-generate">
+              <i class="fas fa-dice"></i> Sortear Agora
+            </button>
+          </div>
+        </div>
+
+        <div class="vertical-divider">
+          <div class="divider-dot"></div>
+          <div class="divider-line"></div>
+          <div class="divider-dot"></div>
+        </div>
+
+        <div class="result-panel">
+          <div class="result-header">
+            <h3>Números Sorteados</h3>
+            <button id="clearResult" class="btn-clear">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+
+          <div id="result" class="result-content">
+            <div class="empty-state">
+              <i class="fas fa-random"></i>
+              <p>Os números sorteados aparecerão aqui</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="footer-container">

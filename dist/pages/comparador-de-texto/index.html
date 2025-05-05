@@ -11,82 +11,237 @@
   <meta name="description" content="Online Web Tools - Ferramentas online, comparador de texto, compare 2 textos">
   <meta name="author" content="Willian Deviti Daniel">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
   <title>Comparador de Texto | Online Web Tools</title>
-  <script type="module" crossorigin src="/online-web-tools/assets/textComparator-VXJ5x-sq.js"></script>
-  <link rel="modulepreload" crossorigin href="/online-web-tools/assets/main-CVzIHhWm.js">
-  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/textComparator-CFMxgo4F.css">
+  <script type="module" crossorigin src="/online-web-tools/assets/textComparator-DEnhleSc.js"></script>
+  <link rel="modulepreload" crossorigin href="/online-web-tools/assets/main-S49h71PB.js">
+  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/main-BeAZEcXN.css">
+  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/textComparator-BEqloeSo.css">
 </head>
 
 <body>
+  <header class="header">
+    <a class="logo-container" href="../../index.html">
+      <svg class="tools-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+      </svg>
 
-  <nav id="navBar">
-    <input type="checkbox"> <!-- This input is hide -->
-
-    <a class="logo-link" href="/online-web-tools/">
-      <h2 class="logo">Online<span>Web</span><i>Tools</i></h2>
+      <span class="logo">
+        Online<span>Web</span>Tools
+      </span>
     </a>
 
-    <ul class="nav-items">
+    <nav class="nav">
+      <div class="toggle-theme-button" id="toggleThemeButton">
+        <span class="box"></span>
+      </div>
+    </nav>
 
-      <li><a href="/online-web-tools/">Inicio</a></li>
+    <div class="toggle-menu-button">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </header>
 
-      <li> <!-- whitemode -->
-        <div>
-          <div class="themeToggle">
-            <label class="themeText">White Mode</label>
-            <input type="checkbox" name="checkbox" id="themeCheckbox">
-            <label for="checkbox" id="themeCheckboxLabel" class="label">
-              <div class="box"></div>
-            </label>
+  <main>
+    <section class="text-comparison-section">
+      <h1 class="title">Comparador de Texto Avançado</h1>
+      <p>Compare dois textos e obtenha informações detalhadas</p>
+
+      <div class="text-comparison-container">
+        <div class="text-input-column">
+          <div class="text-column-header">
+            <h3 class="text-column-title">Texto Original</h3>
+            <span class="character-count" id="countA">0 caracteres</span>
           </div>
+          <textarea id="textA" class="text-editor" placeholder="Digite ou cole o texto original aqui"></textarea>
         </div>
-      </li>
 
-    </ul>
-
-    <div class="menuToggle">
-      <span class="toogleLines"></span>
-      <span class="toogleLines"></span>
-      <span class="toogleLines"></span>
-    </div>
-  </nav>
-
-  <section id="mainSection" class="mainSection">
-    <h2>Comparador de Texto</h2>
-    <div class="text-area-container">
-      <div class="text-column">
-        <h3 class="text-title">Texto 1</h3>
-        <textarea id="textA" class="inputText" placeholder="Digite o primeiro texto aqui" rows="10"
-          cols="60"></textarea>
+        <div class="text-input-column">
+          <div class="text-column-header">
+            <h3 class="text-column-title">Texto Comparativo</h3>
+            <span class="character-count" id="countB">0 caracteres</span>
+          </div>
+          <textarea id="textB" class="text-editor" placeholder="Digite ou cole o texto comparativo aqui"></textarea>
+        </div>
       </div>
-      <div class="text-column">
-        <h3 class="text-title">Texto 2</h3>
-        <textarea id="textB" class="inputText" placeholder="Digite o segundo texto aqui" rows="10" cols="60"></textarea>
+
+      <div class="comparison-options">
+        <div>
+          <input type="checkbox" id="ignoreCase" class="option-checkbox">
+          <label for="ignoreCase" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar maiúsculas/minúsculas
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Compara os textos ignorando diferenças entre maiúsculas e minúsculas</span>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ignoreSpaces" class="option-checkbox">
+          <label for="ignoreSpaces" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar espaços
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Remove todos os espaços antes de comparar os textos</span>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ignorePunctuation" class="option-checkbox">
+          <label for="ignorePunctuation" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar pontuação
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Remove pontuação antes de comparar os textos</span>
+            </div>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="ignoreAccents" class="option-checkbox">
+          <label for="ignoreAccents" class="option-label">
+            <span class="checkbox-custom"></span>
+            Ignorar acentos
+            <div class="tooltip">
+              <span class="tooltip-icon">?</span>
+              <span class="tooltip-text">Remove acentuação antes de comparar os textos</span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div class="action-container">
+        <button id="compareButton" class="compare-button">Comparar Textos</button>
+
+        <div class="tool-buttons">
+          <button id="clearButton" class="clear-button">Limpar Textos</button>
+        </div>
+
+        <div class="extra-options">
+          <span id="swapTexts" class="extra-option">
+            <i>↔️</i> Trocar textos
+          </span>
+          <span id="highlightDiff" class="extra-option">
+            <i>🔍</i> Destacar diferenças
+          </span>
+        </div>
+      </div>
+
+      <div id="resultContainer" class="result-container">
+        <h3 id="resultTitle" class="result-title"></h3>
+
+        <div class="similarity-meter">
+          <div id="similarityBar" class="similarity-progress" style="width: 0%"></div>
+        </div>
+
+        <div id="similarityPercentage" class="similarity-percentage">0%</div>
+
+        <div id="differencesSection" class="differences-section">
+          <h4 class="differences-title">Principais diferenças encontradas:</h4>
+          <div id="differencesList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-branding">
+        <div class="footer-logo">
+          <svg class="tools-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+          </svg>
+          <span class="footer-title">Online<span>Web</span>Tools</span>
+        </div>
+        <p class="footer-tagline">Ferramentas online úteis para facilitar seu dia a dia</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-links-column">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li>
+              <a href="/">
+                <span class="arrow">›</span>
+                Início
+              </a>
+            </li>
+            <li>
+              <a href="../termos-de-uso/index.html">
+                <span class="arrow">›</span>
+                Termos de Uso
+              </a>
+            </li>
+            <li>
+              <a href="../politica-de-privacidade/index.html">
+                <span class="arrow">›</span>
+                Política de Privacidade
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-links-column">
+          <h4>Ferramentas</h4>
+          <ul>
+            <li>
+              <a href="../sorteador/index.html">
+                <span class="arrow">›</span>
+                Sorteador de Números
+              </a>
+            </li>
+            <li>
+              <a href="../gerador-de-senhas/index.html">
+                <span class="arrow">›</span>
+                Gerador de Senhas
+              </a>
+            </li>
+            <li>
+              <a href="../contador-de-caracteres/index.html">
+                <span class="arrow">›</span>
+                Contador de Caracteres
+              </a>
+            </li>
+            <li>
+              <a href="../conversor-de-texto/index.html">
+                <span class="arrow">›</span>
+                Conversor de Texto
+              </a>
+            </li>
+            <li>
+              <a href="../comparador-de-texto/index.html">
+                <span class="arrow">›</span>
+                Comparador de Texto
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="options-container">
-      <label class="option-label">
-        <input type="checkbox" id="ignoreCase" class="option-checkbox">
-        Ignorar maiúsculas/minúsculas
-      </label>
-      <label class="option-label">
-        <input type="checkbox" id="ignoreSpaces" class="option-checkbox">
-        Ignorar espaços
-      </label>
+    <div class="footer-bottom">
+      <p class="copyright">
+        Todos os direitos reservados &copy; <span id="year"></span>.
+        Desenvolvido com <span class="heart">❤️</span> por <strong><a target="_blank"
+            href="https://willianddaniel.github.io/portfolio/">Willian D. Daniel</a></strong>
+      </p>
     </div>
-
-    <div class="button-container">
-      <button class="compareButton" id="compareButton">Comparar Textos</button>
-      <p id="result"></p>
-    </div>
-  </section>
-
-  <footer id="footer">
-    <p>
-      Todos os direitos reservados &copy; 2025.
-      Desenvolvido com ❤️ por <strong>Willian D. Daniel</strong>
-    </p>
   </footer>
 
 

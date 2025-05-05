@@ -14,6 +14,8 @@ export default defineConfig({
                 textConverter: resolve(__dirname, 'pages/conversor-de-texto/index.html'),
                 characterCounter: resolve(__dirname, 'pages/contador-de-caracteres/index.html'),
                 textComparator: resolve(__dirname, 'pages/comparador-de-texto/index.html'),
+                terms: resolve(__dirname, 'pages/termos-de-uso/index.html'),
+                policy: resolve(__dirname, 'pages/politica-de-privacidade/index.html'),
             },
         },
         cssMinify: 'lightningcss',

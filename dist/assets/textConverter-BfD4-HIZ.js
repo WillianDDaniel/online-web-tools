@@ -1,0 +1,1 @@
+import"./main-S49h71PB.js";function n(){let e=document.getElementById("inputText"),t=e.value.toUpperCase();e.value=t}document.getElementById("toUpperCase").addEventListener("click",n);function o(){let e=document.getElementById("inputText"),t=e.value.toLowerCase();e.value=t}document.getElementById("toLowerCase").addEventListener("click",o);

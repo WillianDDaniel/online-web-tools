@@ -1,108 +1,213 @@
-function generateNormal(runTimes) {
+document.addEventListener('DOMContentLoaded', function() {
+  // Elementos do DOM
+  const numberSweep = document.getElementById('numberSweep');
+  const minNumber = document.getElementById('minNumber');
+  const maxNumber = document.getElementById('maxNumber');
+  const repeatNumber = document.getElementById('repeatNumber');
+  const repeatNumberLabel = document.getElementById('repeatNumberLabel');
+  const generateBtn = document.getElementById('generate');
+  const resultDiv = document.getElementById('result');
+  const clearResultBtn = document.getElementById('clearResult');
+  const decreaseSweepBtn = document.getElementById('decreaseSweep');
+  const increaseSweepBtn = document.getElementById('increaseSweep');
 
-    // cleaner for the result div
-    document.getElementById('result').innerHTML = ''
+  // Iniciar com a opção de números únicos oculta
+  repeatNumberLabel.style.display = 'none';
 
-    // cleaner for the result div
-    const min = parseInt(document.getElementById('minNumber').value)
-    const max = parseInt(document.getElementById('maxNumber').value)
+  // Função para limpar o estado vazio do resultado
+  function clearEmptyState() {
+      const emptyState = resultDiv.querySelector('.empty-state');
+      if (emptyState) {
+          resultDiv.removeChild(emptyState);
+      }
+  }
 
-    // check if the number of runs is positive and biggest to zero
-    let checkRunTimes = runTimes === "" ? 1 : runTimes
+  // Função para restaurar o estado vazio
+  function restoreEmptyState() {
+      resultDiv.innerHTML = `
+          <div class="empty-state">
+              <i class="fas fa-random"></i>
+              <p>Os números sorteados aparecerão aqui</p>
+          </div>
+      `;
+  }
 
-    // create array for the result numbers
-    let lastNumbers = []
+  // Função para gerar números aleatórios normais (pode repetir)
+  function generateNormal(runTimes) {
+      // Limpar resultados anteriores
+      resultDiv.innerHTML = '';
+      
+      // Obter valores mínimo e máximo
+      const min = parseInt(minNumber.value);
+      const max = parseInt(maxNumber.value);
+      
+      // Verificar se o número de sorteios é válido
+      let checkRunTimes = runTimes === "" ? 1 : parseInt(runTimes);
+      
+      // Array para os números sorteados
+      let lastNumbers = [];
+      
+      // Gerar números aleatórios
+      for (let times = 0; times < checkRunTimes; times++) {
+          const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+          lastNumbers.push(randomNumber);
+      }
+      
+      // Mostrar números na tela
+      showNumbersOnScreen(lastNumbers);
+  }
 
-    // runner for normal raffle
-    for (let times = 0; times < checkRunTimes; times++) {
-        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-        lastNumbers.push(randomNumber)
-    }
+  // Função para gerar números aleatórios únicos (sem repetição)
+  function generateUnique(runTimes) {
+      // Limpar resultados anteriores
+      resultDiv.innerHTML = '';
+      
+      // Obter valores mínimo e máximo
+      const min = parseInt(minNumber.value);
+      const max = parseInt(maxNumber.value);
+      
+      // Verificar se o número de sorteios é válido
+      let checkRunTimes = runTimes === "" ? 1 : parseInt(runTimes);
+      
+      // Set para números únicos
+      const uniqueNumbers = new Set();
+      
+      // Gerar números únicos aleatórios
+      while (uniqueNumbers.size < checkRunTimes) {
+          const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+          uniqueNumbers.add(randomNumber);
+      }
+      
+      // Converter Set para Array e mostrar na tela
+      const uniqueNumbersArray = Array.from(uniqueNumbers);
+      showNumbersOnScreen(uniqueNumbersArray);
+  }
 
-    // call the function to show numbers on the screen
-    showNumbersOnScreen(lastNumbers)
-}
+  // Função para mostrar números na tela com animação
+  function showNumbersOnScreen(numbers) {
+      // Remover o estado vazio se existir
+      clearEmptyState();
 
-function generateUnique(runTimes) {
+      numbers.forEach((number, index) => {
+          setTimeout(() => {
+              const numberElement = document.createElement("div");
+              numberElement.className = 'result-number';
+              numberElement.innerHTML = `
+                  <span class="number-label">Número ${index + 1}</span>
+                  <span class="number-value">${number}</span>
+              `;
+              resultDiv.appendChild(numberElement);
+              
+              // Scroll suave para o resultado mais recente
+              numberElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, (index + 1) * 500); // Tempo reduzido para melhor experiência
+      });
+  }
 
-    // cleaner for the result div
-    document.getElementById('result').innerHTML = ''
+  // Verificar e executar o sorteio
+  function runRaffle(min, max) {
+      let isUnique = repeatNumber.checked;
+      let range = (max - min) + 1;
+      let sweepValue = parseInt(numberSweep.value) || 1;
+      
+      // Validar se pode fazer sorteio único
+      if (isUnique) {
+          if (range >= sweepValue) {
+              // Adicionar classe de "carregando" ao botão
+              generateBtn.classList.add('loading');
+              generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sorteando...';
+              
+              // Timeout para simular processamento
+              setTimeout(() => {
+                  generateUnique(sweepValue);
+                  // Restaurar botão
+                  generateBtn.classList.remove('loading');
+                  generateBtn.innerHTML = '<i class="fas fa-dice"></i> Sortear Agora';
+              }, 500);
+          } else {
+              showError('O intervalo de números precisa ser maior que o total de sorteios para sorteios únicos!');
+          }
+      } else {
+          // Adicionar classe de "carregando" ao botão
+          generateBtn.classList.add('loading');
+          generateBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sorteando...';
+          
+          // Timeout para simular processamento
+          setTimeout(() => {
+              generateNormal(sweepValue);
+              // Restaurar botão
+              generateBtn.classList.remove('loading');
+              generateBtn.innerHTML = '<i class="fas fa-dice"></i> Sortear Agora';
+          }, 500);
+      }
+  }
 
-    // cleaner for the result div
-    const min = parseInt(document.getElementById('minNumber').value)
-    const max = parseInt(document.getElementById('maxNumber').value)
+  // Função para mostrar mensagem de erro
+  function showError(message) {
+      alert(message);
+  }
 
-    // check if the number of runs is positive and biggest to zero
-    let checkRunTimes = runTimes === "" ? 1 : runTimes
+  // Event listener para iniciar o sorteio
+  generateBtn.addEventListener('click', () => {
+      const min = parseInt(minNumber.value);
+      const max = parseInt(maxNumber.value);
+      
+      // Validações
+      if (isNaN(min) || isNaN(max)) {
+          showError('Você precisa preencher o intervalo de números a serem sorteados!');
+          return;
+      }
+      
+      if (min >= max) {
+          showError('O valor mínimo deve ser menor que o valor máximo!');
+          return;
+      }
+      
+      // Executar o sorteio
+      runRaffle(min, max);
+  });
 
-    // create a structure for unique numbers
-    const uniqueNumbers = new Set();
+  // Event listener para mostrar/ocultar a opção de números únicos
+  numberSweep.addEventListener('input', () => {
+      const value = parseInt(numberSweep.value) || 0;
+      repeatNumberLabel.style.display = value > 1 ? 'flex' : 'none';
+      
+      // Se ajustar para 1, desabilitar a opção de não repetir
+      if (value <= 1) {
+          repeatNumber.checked = false;
+      }
+  });
 
-    // runner for special raffle with unique numbers | with no repeated numbers
-    while (uniqueNumbers.size < checkRunTimes) {
-        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min
-        uniqueNumbers.add(randomNumber)
-    }
+  // Event listener para limpar resultados
+  clearResultBtn.addEventListener('click', () => {
+      restoreEmptyState();
+  });
 
-    // tranform the set in array and show numbers on the screen
-    const uniqueNumbersArray = Array.from(uniqueNumbers)
-    showNumbersOnScreen(uniqueNumbersArray)
-}
+  // Event listeners para botões + e -
+  decreaseSweepBtn.addEventListener('click', () => {
+      let value = parseInt(numberSweep.value) || 1;
+      if (value > 1) {
+          numberSweep.value = value - 1;
+          
+          // Disparar evento para verificar visibilidade da opção de números únicos
+          const event = new Event('input');
+          numberSweep.dispatchEvent(event);
+      }
+  });
 
-// show numbers on the screen and give it all a different time to show it
-function showNumbersOnScreen(lastNumbers) {
-    lastNumbers.forEach((number, index) => {
+  increaseSweepBtn.addEventListener('click', () => {
+      let value = parseInt(numberSweep.value) || 0;
+      numberSweep.value = value + 1;
+      
+      // Disparar evento para verificar visibilidade da opção de números únicos
+      const event = new Event('input');
+      numberSweep.dispatchEvent(event);
+  });
 
-        setTimeout(() => {
-            const showNumbers = document.createElement("div")
-            showNumbers.innerHTML = `<span>${index + 1}° Número:</span> ${number}`
-            showNumbers.classList.add('fade-in')
-            document.getElementById('result').append(showNumbers)
-        }, (index + 1) * 1500)
-    });
-}
-
-// listener for start the raffle | this function check if inputs are fill
-document.getElementById('generate').addEventListener('click', () => {
-    const min = document.getElementById('minNumber').value
-    const max = document.getElementById('maxNumber').value
-
-    if (max !== '' && min !== '') {
-        runRaffle(min, max)
-
-    } else {
-        alert('Você precisa preencher o intervalo de números a serem sorteados!')
-    }
-})
-
-// function for run the raffle | this function check if range of raffle is ok
-function runRaffle(min, max) {
-    let repeat = document.getElementById('repeatNumber').checked
-
-    let range = (max - min) + 1
-
-    if (repeat === true) {
-        
-        // if the range of interval numbers are biggest than range of raffle then run raffle 
-        range >= numberSweep.value ? generateUnique(numberSweep.value)
-            : alert('O intervalo de números precisa ser maior que o total de sorteios, para sorteios únicos!')
-
-    } else {
-
-        // for normal raffle don't need a biggest range of numbers
-        generateNormal(numberSweep.value)
-    }
-}
-
-// node for times of raffle runs
-const numberSweep = document.getElementById('numberSweep')
-
-// node for raffle config | repeat and no-repeat config
-const repeatNumberLabel = document.getElementById('repeatNumberLabel')
-
-// hide and show, repeat or not repeat config on change numbers of raffle runs
-numberSweep.addEventListener('change', () => {
-    numberSweep.value > 1
-        ? repeatNumberLabel.style.display = 'flex'
-        : repeatNumberLabel.style.display = 'none'
-})
+  // Impedir valores negativos nos inputs
+  [numberSweep, minNumber, maxNumber].forEach(input => {
+      input.addEventListener('change', () => {
+          if (input.value < 0) input.value = 0;
+      });
+  });
+});
