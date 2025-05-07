@@ -20,10 +20,10 @@
 
   <title>Gerador de Senhas | Online Web Tools</title>
 
-  <script type="module" crossorigin src="/online-web-tools/assets/passGenerator-aq0pMKQD.js"></script>
+  <script type="module" crossorigin src="/online-web-tools/assets/passGenerator-B5HR3mfP.js"></script>
   <link rel="modulepreload" crossorigin href="/online-web-tools/assets/main-S49h71PB.js">
   <link rel="stylesheet" crossorigin href="/online-web-tools/assets/main-BeAZEcXN.css">
-  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/passGenerator-CXLcTWhX.css">
+  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/passGenerator-Cgb7618z.css">
 </head>
 
 <body>
@@ -53,26 +53,78 @@
     </div>
   </header>
 
-  <section id="mainSection">
+  <main class="content-area">
+    <h1 class="title">Gerador de Senhas</h1>
+    <p class="subtitle">Configure seus parâmetros e obtenha uma senha forte!</p>
 
-    <img id="mainImg" class="main-img"
-      src="https://animecharacters.sirv.com/online-web-tools/gerador-de-senhas-dark.png" alt="Gerador de Senhas" />
+    <div class="password-options">
+      <div class="slider-container">
+        <div class="slider-label">
+          <span class="slider-text">Tamanho da senha</span>
+          <span class="slider-value" id="lengthValue">15</span>
+        </div>
+        <input id="lengthSlider" class="slider" type="range" min="4" max="32" value="15">
+      </div>
 
-    <main class="container-input">
-      <span> Tamanho <span id="valor"> </span> caracteres </span>
-      <input id="slider" class="slider" type="range" min="5" max="25" value="15" />
+      <div class="checkbox-options">
+        <div class="checkbox-option">
+          <input type="checkbox" id="uppercaseOption" checked>
+          <label class="checkbox-label" for="uppercaseOption">Letras maiúsculas (A-Z)</label>
+        </div>
 
-      <button id="generateButton" class="generateButton"> Gerar Senha</button>
-    </main>
+        <div class="checkbox-option">
+          <input type="checkbox" id="lowercaseOption" checked>
+          <label class="checkbox-label" for="lowercaseOption">Letras minúsculas (a-z)</label>
+        </div>
 
-    <div id="container-password" class="container-password hide">
-      <span class="title">Sua senha foi gerada:</span>
-      <span id="password" class="password"></span>
-      <span class="tooltip">Clique na senha para copiar. ✌️</span>
+        <div class="checkbox-option">
+          <input type="checkbox" id="numbersOption" checked>
+          <label class="checkbox-label" for="numbersOption">Números (0-9)</label>
+        </div>
+
+        <div class="checkbox-option">
+          <input type="checkbox" id="symbolsOption" checked>
+          <label class="checkbox-label" for="symbolsOption">Símbolos (@#$%)</label>
+        </div>
+      </div>
+
+      <button id="generateButton" class="generate-button">
+        Gerar Senha Segura
+      </button>
     </div>
 
+    <div class="password-result" id="passwordResult">
+      <div class="result-title">Sua senha foi gerada:</div>
+      <div class="password-display" id="passwordDisplay">********</div>
+      <div class="tooltip">Clique na senha para copiar ✌️</div>
 
-  </section>
+      <div class="strength-meter">
+        <div class="strength-label">
+          <span class="strength-text">Nível de segurança:</span>
+          <span class="strength-value" id="strengthValue">-</span>
+        </div>
+        <div class="strength-bar">
+          <div class="strength-progress" id="strengthProgress"></div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="action-button copy-button" id="copyButton">
+          Copiar Senha
+        </button>
+        <button class="action-button history-button" id="historyButton">
+          Histórico
+        </button>
+      </div>
+    </div>
+
+    <div class="password-history" id="passwordHistory">
+      <h3 class="history-title">Senhas Geradas Recentemente</h3>
+      <div class="history-list" id="historyList"></div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
 
   <footer class="footer">
     <div class="footer-container">
