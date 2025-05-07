@@ -19,10 +19,10 @@
     rel="stylesheet">
 
   <title>Conversor de Texto | Online Web Tools</title>
-  <script type="module" crossorigin src="/online-web-tools/assets/textConverter-BfD4-HIZ.js"></script>
+  <script type="module" crossorigin src="/online-web-tools/assets/textConverter-eO7F_16j.js"></script>
   <link rel="modulepreload" crossorigin href="/online-web-tools/assets/main-S49h71PB.js">
   <link rel="stylesheet" crossorigin href="/online-web-tools/assets/main-BeAZEcXN.css">
-  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/textConverter-CyrEATrJ.css">
+  <link rel="stylesheet" crossorigin href="/online-web-tools/assets/textConverter-D2UkyDI9.css">
 </head>
 
 <body>
@@ -52,18 +52,106 @@
     </div>
   </header>
 
-  <section id="mainSection" class="mainSection">
+  <main class="content-area">
+    <h1 class="title">Conversor de Texto</h1>
+    <p class="subtitle">Conversor de texto para outros padrões</p>
 
-    <h2>Conversor de Texto</h2>
-    <textarea type="text" class="inputText" id="inputText" placeholder="Digite o texto aqui" rows="15"
-      cols="120"></textarea>
-    <br>
-    <button class="generateButton" id="toUpperCase">Converter para Maiúsculas</button>
-    <button class="generateButton" id="toLowerCase">Converter para Minúsculas</button>
-    <br>
-    <p id="resultado"></p>
+    <div class="text-areas">
+      <div class="text-area-container">
+        <label class="text-area-label" for="inputText">Texto Original</label>
+        <textarea class="text-area" id="inputText" placeholder="Digite ou cole seu texto aqui"></textarea>
+      </div>
 
-  </section>
+      <div class="text-area-container">
+        <label class="text-area-label" for="outputText">Texto Convertido</label>
+        <textarea class="text-area" id="outputText" placeholder="Resultado aparecerá aqui" readonly></textarea>
+      </div>
+    </div>
+
+    <div class="options-section">
+      <div class="buttons-grid">
+        <button class="action-button" id="toUpperCase">MAIÚSCULAS</button>
+        <button class="action-button" id="toLowerCase">minúsculas</button>
+        <button class="action-button" id="toCapitalize">Capitalizar Palavras</button>
+        <button class="action-button" id="toCapitalizeSentence">Capitalizar Frases</button>
+        <button class="action-button" id="toAlternate">AlTeRnAdO</button>
+        <button class="action-button" id="toInverse">INVERSO</button>
+        <button class="action-button button-cleanup" id="removeExtraSpaces">Remover Espaços</button>
+        <button class="action-button button-copy" id="copyText">Copiar Resultado</button>
+        <button class="action-button button-swap" id="swapText">Trocar Textos</button>
+        <button class="action-button button-clear" id="clearText">Limpar Tudo</button>
+      </div>
+
+      <div class="advanced-options">
+        <h3 class="advanced-options-title">Opções Avançadas</h3>
+
+        <div class="option-row">
+          <div class="option-item">
+            <input type="checkbox" id="removeAccents">
+            <label class="option-label" for="removeAccents">Remover acentos</label>
+          </div>
+
+          <div class="option-item">
+            <input type="checkbox" id="removeNumbers">
+            <label class="option-label" for="removeNumbers">Remover números</label>
+          </div>
+
+          <div class="option-item">
+            <input type="checkbox" id="removePunctuation">
+            <label class="option-label" for="removePunctuation">Remover pontuação</label>
+          </div>
+
+          <div class="option-item">
+            <input type="checkbox" id="addLineNumbers">
+            <label class="option-label" for="addLineNumbers">Adicionar numeração</label>
+          </div>
+        </div>
+
+        <div class="find-replace-section">
+          <h4 class="find-replace-title">Localizar e Substituir</h4>
+          <div class="find-replace-controls">
+            <input type="text" id="findText" class="find-replace-input" placeholder="Localizar...">
+            <input type="text" id="replaceText" class="find-replace-input" placeholder="Substituir por...">
+            <button class="action-button" id="findReplaceButton">Substituir</button>
+          </div>
+        </div>
+
+        <div class="custom-case-section">
+          <h4 class="custom-case-title">Personalizar Maiúsculas/Minúsculas</h4>
+          <div class="custom-case-controls">
+            <input type="text" id="customCaseText" class="custom-case-input" placeholder="Ex: AbCdEf">
+            <button class="action-button" id="applyCustomCase">Aplicar Padrão</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-stats">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">Caracteres</div>
+          <div class="stat-value" id="charCount">0</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-label">Palavras</div>
+          <div class="stat-value" id="wordCount">0</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-label">Linhas</div>
+          <div class="stat-value" id="lineCount">0</div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-label">Parágrafos</div>
+          <div class="stat-value" id="paragraphCount">0</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
 
   <footer class="footer">
     <div class="footer-container">
