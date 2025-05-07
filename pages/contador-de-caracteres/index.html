@@ -50,21 +50,66 @@
     </div>
   </header>
 
-  <section id="mainSection" class="mainSection">
+  <main class="content-area">
+    <h1 class="title">Contador de Caracteres</h1>
+    <p class="subtitle">Conte quantos caracteres e palavras tem em seu texto</p>
 
-    <h2>Contador de caracteres</h2>
-
-    <textarea type="text" class="textInput" id="textInput" placeholder="Digite ou cole seu texto aqui" rows="16"
-      cols="120">
-    </textarea>
-
-    <div class="result">
-      <p>Contagem de caracteres: <span id="caractersCount">0</span></p>
-      <p>Contagem de palavras: <span id="wordsCount">0</span></p>
-      <p>Contagem de linhas: <span id="linesCount">0</span></p>
+    <div class="text-input-container">
+      <textarea class="text-input" id="textInput" placeholder="Digite ou cole seu texto aqui"
+        spellcheck="true"></textarea>
     </div>
 
-  </section>
+    <div class="stats-container">
+      <div class="stat-card characters">
+        <div class="stat-label">Caracteres</div>
+        <div class="stat-value" id="charactersCount">0</div>
+      </div>
+
+      <div class="stat-card words">
+        <div class="stat-label">Palavras</div>
+        <div class="stat-value" id="wordsCount">0</div>
+      </div>
+
+      <div class="stat-card characters-no-spaces">
+        <div class="stat-label">Caracteres (sem espaços)</div>
+        <div class="stat-value" id="charactersNoSpacesCount">0</div>
+      </div>
+
+      <div class="stat-card reading-time">
+        <div class="stat-label">Tempo de Leitura</div>
+        <div class="stat-value" id="readingTime">0 min</div>
+      </div>
+    </div>
+
+    <div class="limit-container">
+      <span class="limit-label">Limite de caracteres:</span>
+      <input type="number" class="limit-input" id="characterLimit" min="0" value="280">
+      <div class="limit-progress">
+        <div class="limit-bar" id="limitProgressBar"></div>
+      </div>
+      <span class="limit-counter" id="limitCounter">0/280</span>
+    </div>
+
+    <div class="extras-section">
+      <h3 class="section-title">Ações e Opções</h3>
+      <div class="extras-grid">
+        <button class="action-button copy-button" id="copyButton">
+          Copiar Texto
+        </button>
+        <button class="action-button clear-button" id="clearButton">
+          Limpar Texto
+        </button>
+      </div>
+
+      <div class="text-info" id="textInfo">
+        <p>Seu texto começa com: <span class="text-preview" id="textPreview">...</span></p>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
 
   <footer class="footer">
     <div class="footer-container">
