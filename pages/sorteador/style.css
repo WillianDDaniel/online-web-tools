@@ -1,44 +1,32 @@
-.raffle-container {
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-  overflow: hidden;
+.content-area {
+  padding: 2rem 50px;
 }
 
-.header-section {
+.content-area .title {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--gray-900);
-  padding: 2rem;
-  text-align: center;
   position: relative;
-  overflow: hidden;
+  display: inline-block;
+  padding-bottom: 0.4rem;
 }
 
-.icon-container {
-  margin-bottom: 1rem;
+.content-area .title::before {
+  content: "🎲";
+  padding-right: 2px;
 }
 
-.icon-container i {
-  font-size: 3rem;
-  animation: float 3s ease-in-out infinite;
-}
-
-.header-section h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  position: relative;
-  z-index: 1;
+.content-area .subtitle {
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .card-controls {
   display: flex;
   padding: 0;
   position: relative;
+  border: 1px solid var(--gray-200);
 }
 
 .control-panel {
@@ -333,11 +321,13 @@ input:checked + .slider:before {
 
 .info-panel {
   background-color: var(--yellow-100);
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   color: var(--gray-600);
   font-size: 0.9rem;
   display: flex;
   align-items: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .info-panel i {

@@ -1,34 +1,24 @@
 .content-area {
-  padding: 2rem;
+  padding: 2rem 50px;
 }
 
 .content-area .title {
   width: 100%;
   font-size: 2rem;
-  margin-bottom: 2rem;
   font-weight: 700;
   color: var(--gray-900);
   position: relative;
   display: inline-block;
-  padding-bottom: 0.75rem;
-  text-align: center;
+  padding-bottom: 0.4rem;
 }
 
-.content-area .title:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(to right, var(--gray-900), var(--orange-500));
-  border-radius: 2px;
+.content-area .title::before {
+  content: "📝";
+  padding-right: 2px;
 }
 
 .content-area .subtitle {
   width: 100%;
-  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -52,8 +42,8 @@
 
 .text-input:focus {
   outline: none;
-  border-color: var(--blue-700);
-  box-shadow: 0 0 0 3px rgba(63, 55, 201, 0.2);
+  border-color: var(--gray-400);
+  box-shadow: 0 0 0 1px rgba(63, 55, 201, 0.15);
 }
 
 .text-input::placeholder {
@@ -74,27 +64,12 @@
   box-shadow: 0 2px 6px var(--shadow-light);
   text-align: center;
   transition: var(--transition);
+  border-top: 4px solid var(--yellow-700);
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px var(--shadow-dark);
-}
-
-.stat-card.characters {
-  border-top: 4px solid var(--orange-500);
-}
-
-.stat-card.words {
-  border-top: 4px solid var(--green-600);
-}
-
-.stat-card.reading-time {
-  border-top: 4px solid var(--yellow-700);
-}
-
-.stat-card.characters-no-spaces {
-  border-top: 4px solid var(--blue-700);
 }
 
 .stat-label {
@@ -165,11 +140,11 @@
 }
 
 .clear-button {
-  background-color: var(--orange-600);
+  background-color: var(--red-500);
 }
 
 .clear-button:hover {
-  background-color: #e64a45;
+  background-color: var(--orange-600);
 }
 
 .limit-container {
