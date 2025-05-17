@@ -21,7 +21,7 @@
   --green-500: #66bb6a;
   --green-600: #2ecc71;
   --green-50: #c8e6c9;
-  --red-500: #e40a0a;
+  --red-500: #ff3627;
   --error-color: #f72585;
   --white: #ffffff;
   --shadow-light: rgba(0, 0, 0, 0.1);
@@ -38,6 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 .header .logo-container {
@@ -49,14 +50,13 @@
 .header .tools-icon {
     width: 20px;
     height: 20px;
-    margin-left: 30px;
     color: var(--white);
 }
 
 .header .logo {
   color: var(--white);
-  margin-left: 5px;
-  font-size: 18px;
+  margin-left: 7px;
+  font-size: 20px;
 }
 
 .header .logo span {
@@ -117,7 +117,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-right: 30px;
   padding: 0 5px;
 }
 
@@ -140,7 +139,7 @@
   padding: 3rem 3rem 1.5rem 3rem;
   margin-top: 4rem;
   border-top: 4px solid;
-  border-image: linear-gradient(to right, var(--gray-900), var(--orange-500)) 1;
+  border-image: linear-gradient(to right, var(--gray-900), var(--red-500)) 1;
 }
 
 .footer-container {
@@ -209,7 +208,7 @@
   left: 0;
   width: 40px;
   height: 3px;
-  background: var(--orange-500);
+  background: var(--red-500);
   border-radius: 2px;
 }
 
@@ -276,7 +275,7 @@
 }
 
 .heart {
-  color: var(--orange-500);
+  color: var(--red-500);
   font-size: 1.1rem;
   animation: heartbeat 1.5s infinite;
   display: inline-block;
