@@ -1,4 +1,4 @@
-Languages: 🇺🇸 [English](README.md) · 🇧🇷 [Português](README.pt-BR.md) · 🇪🇸 [Español](README.es.md)
+Languages: 🇺🇸 [English](README.MD) · 🇧🇷 [Português](README.pt-BR.MD) · 🇪🇸 [Español](README.es.MD)
 
 ---
 
