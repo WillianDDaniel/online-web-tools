@@ -1,140 +1,158 @@
+Languages: 🇺🇸 [English](README.md) · 🇧🇷 [Português](README.pt-BR.md) · 🇪🇸 [Español](README.es.md)
+
+---
+
 # 🛠️ Online Web Tools
 
-[![Estado do Projeto](https://img.shields.io/badge/estado-ativo-brightgreen)](https://willianddaniel.github.io/online-web-tools/)
-[![Licença](https://img.shields.io/badge/licença-MIT-blue)](LICENSE)
-[![Responsivo](https://img.shields.io/badge/responsivo-sim-success)](https://willianddaniel.github.io/online-web-tools/)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Responsive](https://img.shields.io/badge/responsive-yes-success)
 
-## 📋 Descrição Geral
+## 📋 Overview
 
-Um conjunto de ferramentas web gratuitas e acessíveis para uso diário. Este projeto consiste em um site intuitivo com uma página inicial e cinco aplicativos úteis, cada um projetado para resolver problemas específicos.
+A collection of free and accessible web tools for daily use. This project consists of an intuitive website with a home page and five useful applications, each designed to solve specific problems.
 
-### 🔗 [Visualize o Projeto ao Vivo](https://willianddaniel.github.io/online-web-tools/)
+## 🔗 Live Preview
 
-## 📱 Screenshots
+## 📱 Screenshot
 
 <div align="center">
-  <img src="https://animecharacters.sirv.com/screenshots/online-web-tools-white-mode.png" alt="Modo Claro" width="400"/>
-  <img src="https://animecharacters.sirv.com/screenshots/online-web-tools-dark-mode.png" alt="Modo Escuro" width="400"/>
+  <img src="screenshots/index-tela-inicial.jpg" alt="App Screenshot" width="600"/>
 </div>
 
-## 🧰 Ferramentas Disponíveis
+## 🧰 Available Tools
 
-### 🎲 Sorteador de Números Aleatórios
-Gere números aleatórios rapidamente dentro de intervalos personalizados.
+### 🎲 Random Number Generator
+Generate random numbers quickly within custom ranges.
 
-### 🔐 Gerador de Senhas Aleatórias
-Crie senhas seguras e aleatórias com opções personalizáveis de complexidade.
+### 🔐 Random Password Generator
+Create secure and random passwords with customizable complexity options.
 
-### 🔄 Conversor de Texto
-Transforme textos entre maiúsculo e minúsculo com facilidade.
+### 🔄 Text Converter
+Easily transform text between uppercase and lowercase.
 
-### 📊 Contador de Palavras e Caracteres
-Analise seu texto com estatísticas detalhadas de palavras e caracteres.
+### 📊 Word and Character Counter
+Analyze your text with detailed word and character statistics.
 
-### 🔍 Comparador de Textos
-Compare dois textos e identifique as diferenças entre eles.
+### 🔍 Text Comparator
+Compare two texts and identify the differences between them.
 
-## 🌓 Temas
+## 📱 Responsiveness
 
-O site oferece suporte a temas claro e escuro persistentes para melhor adaptação às preferências do usuário. A seleção de tema é salva automaticamente para visitas futuras.
+The website layout was carefully designed to be fully responsive, ensuring a consistent and pleasant experience across:
 
-## 📱 Responsividade
-
-O layout do site foi cuidadosamente desenvolvido para ser totalmente responsivo, garantindo uma experiência consistente e agradável em:
 - 💻 Desktops
 - 💻 Laptops
 - 📱 Tablets
 - 📱 Smartphones
 
-## 🧩 Tecnologias Utilizadas
+## 🧩 Technologies Used
 
-Este projeto foi construído utilizando tecnologias web fundamentais, sem dependências externas:
+This project was built using fundamental web technologies, with no external dependencies:
 
-- **HTML5** - Estruturação semântica
-- **CSS3** - Estilização moderna e responsiva
-- **JavaScript** - Lógica e interatividade
-- **Vite** - Build e otimização
+- **HTML5** — Semantic structuring  
+- **CSS3** — Modern and responsive styling  
+- **JavaScript** — Logic and interactivity  
+- **Vite** — Build and optimization  
 
-## 📁 Estrutura de Pastas
+## 📁 Folder Structure
 
 ```
 online-web-tools/
-├── index.html                    # Página inicial
-├── pages/                        # Aplicativos individuais
-│   ├── sorteador/                # Sorteador de números
-│   ├── gerador-de-senhas/        # Gerador de senhas
-│   ├── conversor-de-texto/       # Conversor de texto
-│   ├── contador-de-caracteres/   # Contador de palavras
-│   └── comparador-de-texto/      # Comparador de textos
-├── assets/                       # Recursos compartilhados
-│   ├── css/
-│   └── js/
-└── dist/                         # Build pronto para produção
+├── index.html # Home page
+├── pages/ # Individual applications
+│ ├── sorteador/ # Number generator
+│ ├── gerador-de-senhas/ # Password generator
+│ ├── conversor-de-texto/ # Text converter
+│ ├── contador-de-caracteres/ # Word counter
+│ └── comparador-de-texto/ # Text comparator
+├── assets/ # Shared resources
+│ ├── css/
+│ └── js/
+└── dist/ # Production-ready build
 ```
 
-## 🚀 Como Executar Localmente
+## 🚀 How to Run Locally
 
-### Pré-requisitos
-- Node.js (versão recomendada: 14.x ou superior)
-- npm ou yarn
+### Prerequisites
 
-### Instalação
+- Node.js (recommended version: 14.x or higher)
+- npm or yarn
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/WillianDDaniel/online-web-tools
-   ```
+### Installation
 
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd online-web-tools
-   ```
+Clone this repository:
 
-3. Instale as dependências:
-   ```bash
-   npm install
-   # ou
-   yarn
-   ```
+```
+git clone https://github.com/WillianDDaniel/online-web-tools
+```
 
-4. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   # ou
-   yarn dev
-   ```
+Navigate to the project directory:
 
-5. Abra o navegador e acesse:
-   ```
-   http://localhost:5173/online-web-tools/
-   ```
+```
+cd online-web-tools
+```
 
-## 📦 Build para Produção
+Install the dependencies:
 
-Para gerar uma versão otimizada para produção:
+```
+npm install
+```
 
-```bash
+or
+
+```
+yarn
+```
+
+Start the development server:
+
+```
+npm run dev
+```
+
+or
+
+```
+yarn dev
+```
+
+Open your browser and access:
+
+```
+http://localhost:5173/online-web-tools/
+```
+
+## 📦 Production Build
+
+To generate an optimized version for production:
+
+```
 npm run build
-# ou
+```
+
+or
+
+```
 yarn build
 ```
 
-Os arquivos de build estarão disponíveis na pasta `dist/`.
+The build files will be available in the `dist/` folder.
 
-## 🤝 Como Contribuir
+## 🤝 How to Contribute
 
-Contribuições são sempre bem-vindas! Siga estes passos:
+Contributions are always welcome! Follow these steps:
 
-1. Faça um fork do projeto
-2. Crie sua branch de feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork the project  
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)  
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)  
+4. Push to the branch (`git push origin feature/AmazingFeature`)  
+5. Open a Pull Request  
 
-### 🐛 Reportando Problemas
+## 🐛 Reporting Issues
 
-Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/WillianDDaniel/online-web-tools/issues) detalhando o problema ou a melhoria proposta.
+Found a bug or have a suggestion? Open an issue detailing the problem or proposed improvement.
 
-## 📜 Licença
+## 📜 License
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
+This project is licensed under the MIT License — see the `LICENSE` file for details.
